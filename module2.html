@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Given instructions to the browser about the character encoding-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics</title>
+</head>
+
+<body>
+    <!-- 
+        - If you want to add multiple class names on one tag give space between them. Like class="abc def ghi" abc, def, ghi
+         are class names.
+        TAGS
+
+        -  Tags are used to define content in HTML. Some examples of tags are <p> , <h1>, <html>, <style>. they have attributes in then.
+           Some tags are self closing tags like <br> <hr>
+     
+
+
+        Attributes
+
+            Attributres define and modify the HTML tags. Tags and Attributes collectively make the HTML language
+
+            - GLobal Attributes
+            Global Attributes can be applied to all tags. They are common attributes. Like : id, class, style, lang
+
+            - Non Global Attributes
+            Non Global Attributes are appliced to specific attributes. Like : reversed, start, scr, alt.
+            
+    
+
+        Content sepration and styling
+
+            - Italics : <em> is used instead <i> as the first tag empasies the text and when it read by the machine it empahsises on the
+                text but with <i> only text is styled.
+                    
+            - Bold : <strong> is used instead of <b>
+
+            - <blockquote> should be used to wrap text in a quote.    
+
+            Tags other than <em>,  <strong>,  <b>, <i> as said to be semantic as they define content in some way.
+            
+                ********
+                Tags such as <article>, <section>, <header>, <nav> and <footer> were specifically introduced in HTML5
+                ********
+        
+    
+        Semantic elements
+        
+            <header> is simply an area to add an introduction to your webpage
+            <article> is a stanf alone element and it can be used to reference particular article or to scrool down to a
+                particular article.Rg below
+            <section> The section element is used to section a page. For example, chapters in a book, sections in a thesis or 
+                splitting an 'about me' page into introduction, interests and skills. 
+            
+            <div> element should only be used of you cannot use any other element.
+            <span> element is used if we want to style something inside the line. And should be your last option.
+                <abbr> <code> <cite> can be used instead when possible
+       
+       
+        <img>
+            
+            alt="" section in image tag should only be filled if the image had some meaining. if the image is just for 
+            decoration purposes then leave it empty.
+
+            tittle="" section is used to show text when cursor is rested on the image.
+
+            height and width of the image should only be modified using teh heiht and width attributes
+       
+       
+        Hyperlinks
+            
+            <a> element is called anchor element.
+
+            Hyperlinks are links in the text which lead to another page when cliked.
+            <a></a> tags are used for hyperlinks. And you can add images or text to the links.you can add mail feature too.
+            you can id element to the <a> tag and refere to particular article or section on the page.
+            
+            target="_blank"/"_self" : can be used to open link in new or same page.
+
+            The "media" attribute was introduced in HTML5. We will look at it briefly here. 
+            It is used to specify what kind of media or device the URL you linked to in href is 
+            optimized for. The URL could be targeted for special devices like projectors, speech synthesizers
+            or pages meant to be printed. It is useful if you want to cater your target document that the URL
+             points to a particular device type
+
+             media tag can be used to show different image for desktop version and different image for mobile 
+             version  to have the best version of the website.
+
+            The "download" attribute is also new in HTML5 and it makes a link download a file instead of navigate 
+            to another location. It takes in the filename as value but the value is optional.
+
+        
+        Detail and Summanry : 
+            
+            The details element includes <summary> element which expands to show full text
+
+                -->
+
+
+
+    <nav>
+        <h1><em>HTML Basics</em></h1>
+        <ul>
+            <li><a href="#ces">CES 2018</a></li>
+            <li><a href="#vegan">Being Vegan</a></li>
+        </ul>
+    </nav>
+    </header>
+    <!--  The main contents of the blog starts here -->
+    <main>
+        <!--  Each blogpost is split into individual articles -->
+        <article id="ces">
+            <header>
+                <h2>CES 2018</h2>
+                <h3>Consumer electronics and consumer technology tradeshow</h3>
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam neque risus, consequat eget vestibulum eu, consequat at eros. Nam eu nisl vel neque malesuada sollicitudin quis eget libero.</p>
+            <footer>
+                <p>Written by guest author Nicholas Abc. Read Nicholas's blog here.</p>
+            </footer>
+        </article>
+
+        <!--  Article 2 -->
+        <article id="vegan">
+            <header>
+                <h2>Being Vegan</h2>
+                <h3>My cooking tips for new vegans</h3>
+            </header>
+            <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+            <footer>
+                <p>Written by Brad Abc. Read my other health articles here.</p>
+            </footer>
+        </article>
+
+        <section>
+            <p><code>Hey this is code</code></p>
+            <p><cite>Hey! this is cite</cite></p>
+            <p><abbr title="">Hey! this is abbr</abbr></p>
+        </section>
+
+        <img src="https://courses.edx.org/assets/courseware/v1/c92337ae06a2117b39c05568d1885b00/asset-v1:W3Cx+HTML5.0x+3T2019+type@asset+block/badgehtml5.png" alt="an image" height="130">
+        <br>
+        <a href="mailto:singhinnov@gmail.com?subject= Mailing from online github tutorial">Mail me</a>
+        <br>
+        <a href="https://en.wikipedia.org/wiki/Media_queries?output=print" media="print and (resolution:250dpi)">Print wiki page about media queries</a>
+        <br>
+        <a href="https://courses.edx.org/assets/courseware/v1/c92337ae06a2117b39c05568d1885b00/asset-v1:W3Cx+HTML5.0x+3T2019+type@asset+block/badgehtml5.png" download="img.png">Download</a>
+
+        <section>
+            <details>
+                <summary>Epcot Center</summary>
+                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+            </details>
+        </section>
+
+        <a href="/ismap-image/ismap.cgi" target="_self">
+            <img src="https://courses.edx.org/assets/courseware/v1/c92337ae06a2117b39c05568d1885b00/asset-v1:W3Cx+HTML5.0x+3T2019+type@asset+block/badgehtml5.png" alt="an image" height="130" ismap>
+
+        </a>
+    </main>
+
+    <!--Our global footer used across all pages in our website-->
+    <footer>
+        ©Copyright 2025. All rights reserved.
+        <nav>
+            <ul>
+                <li><a href="">Email</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">License</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+</body>
+
+</html>

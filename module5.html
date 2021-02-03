@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Multimedia</title>
+    <!-- HTML Multimedia, Tables, CSS tricks, embeding content-->
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            padding: 15px;
+        }
+        
+        table.eg1,
+        th.eg1,
+        td.eg1 {
+            border: 1px solid black;
+        }
+        
+        table.eg2,
+        th.eg2,
+        td.eg2 {
+            border-bottom: 1px solid black;
+        }
+        
+        tr:hover {
+            background-color: #ccff99;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        <table> tag :
+            
+            - Adding borders to tables = <table border = 1> to add border and <table border = 0>
+                to have no borders
+        
+        <caption> tag : 
+
+            - Is inside <table> tag and gives extra information on the top of table.
+        
+        <tr> tag : 
+
+            - Creates a new row.
+
+        <th> tag : 
+
+            - Creates header tag names.
+        
+        colspan : used to define how many columns will the tab take.
+        rowspan : used to define how many rows will the tabs take.
+        scope : tell what the role of tab is row/col/rowgroup/colgroup/auto.
+        
+        header : attribute is used to connect the rows to which value is specified.
+
+        colgroup : is used to collect groups and make it easy to define properties for the columms
+        span - takes a positive integer value. It specifies the number of columns you want the col element to span (cover). 
+
+    
+        - Table body is divided into three pasrt head, body, foot and these three parts are deifned using
+        <thead> <tbody> <tfoot>
+        
+        <thead> :  is used to group the header content in a HTML table. 
+
+        <tbody> : is used to include all the <tr> <th> <td> tags
+
+        <tfoot> : is ued to define the last rows of the table
+
+
+        border-collaps property is used to join the borderd to make them looks as one. || to |
+
+        height/wodth of the table and tabs can be specified and the text allingment can also be assigned.
+         - td { text-align: right;}
+         - th { vertical-align: top; }
+         - th, td { padding: 15px; }
+            
+
+        Zebra table: 
+             
+           - tr:nth-child(even) { background-color: grey; }
+           - tr:nth-child(odd) { background-color: #ccff99; }
+
+           <style>
+               table.eg1 tr:nth-child(even) { background-color: #ccff99; }
+               table.eg2 tr:nth-child(odd) { background-color: #ccff99; }
+               table.eg3 tr:nth-child(3n) { background-color: #ccff99; }
+           </style>
+
+        Hover to highlight :
+
+            <style>
+                tr:hover {background-color: #ccff99; }
+            </style>
+
+        
+        Overflow : 
+             
+            visible - Content that has overflowed is visible outside the parent element. Eg: Text in a box overflows 
+            outside box and is visible.
+            
+            hidden - Content that has overflowed is hidden. This makes the overflowed content inaccessible. 
+            
+            scroll - Content that has overflowed is hidden but a scroll bar is added to make it accessible. 
+            
+            auto - Content that has overflowed is hidden but a scroll bar is automatically added to view hidden content. 
+    -->
+
+
+    <!-- 
+        <audio> tag :
+
+            - Most common audio formats are : MP3, WAV and Ogg. 
+            - Any text within the <audio> tags will be displayed if the browser does not support the audio element.
+            - 'loop' attribute can be confihured to make the audio loop.
+            - 'preloaded' and 'autoplay' can also help user in using the features.
+            
+
+            - You can add multiple formats using <source> tag , in case one format is not supported by the browser
+                - You can add type in <source> tag like <source src="sounds/flute.mp3" type="audio/mpeg"> or type = "audio/wav"
+
+    
+         <video> tag :
+
+            - Every thing is similar to the audio tag
+            - <track> tag is extra tag that is used to add subtitiles and captions to the video.
+    -->
+
+    <!-- 
+        <iframe> tag
+
+            - iframe tag is used to  embedd the content and style it differently
+            Eg: <iframe src="https://www.youtube.com/embed/YE7VzlLtp-4"></iframe>
+
+        ismap and usemap can be used to make working map with clickable countries
+    -->
+
+    <table border="1">
+        <colgroup>
+            <col span="1" style="background-color:green">
+            <col span="1" style="background-color:orange">
+        </colgroup>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Alexa</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>35</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border=1>
+        <colgroup>
+            <col span="1" style="background-color:green">
+            <col span="1" style="background-color:orange">
+        </colgroup>
+        <thead style="color:white">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alexa</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>James</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Trisha</td>
+                <td>23</td>
+            </tr>
+        </tbody>
+        <tfoot style="font-style: italic;">
+            <tr>
+                <td>3 Unique Names</td>
+                <td>2 Unique Ages</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table class="eg1">
+        <tr>
+            <th class="eg1">Names</th>
+            <th class="eg1">Age</th>
+            <th class="eg1">Gender</th>
+        </tr>
+        <tr>
+            <td class="eg1">Michael</td>
+            <td class="eg1">21</td>
+            <td class="eg1">Male</td>
+        </tr>
+        <tr>
+            <td class="eg1">Amy</td>
+            <td class="eg1">37</td>
+            <td class="eg1">Female</td>
+        </tr>
+    </table>
+    <br>
+    <table class="eg2">
+        <tr>
+            <th class="eg2">Names</th>
+            <th class="eg2">Age</th>
+            <th class="eg2">Gender</th>
+        </tr>
+        <tr>
+            <td class="eg2">Michael</td>
+            <td class="eg2">21</td>
+            <td class="eg2">Male</td>
+        </tr>
+        <tr>
+            <td class="eg2">Amy</td>
+            <td class="eg2">37</td>
+            <td class="eg2">Female</td>
+        </tr>
+    </table>
+
+
+    <br>
+    <br>
+    <!-- Audio Section-->
+    <audio src="https://archive.org/download/Music_Calgary_PD_1/The.good.the.bad.and.the.ashy.mp3" controls loop muted preload="none">
+        Your browser does not support the audio file.
+      </audio>
+
+    <audio controls>
+        <source src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+3T2016+type@asset+block@splash.wav" type="audio/wav">
+        <source src="https://courses.edx.org/asset-v1:W3Cx+HTML5.0x+3T2016+type@asset+block@splash.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+
+    <!-- Video  Section-->
+
+    <video controls height="320" width="240">
+        <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+        <source src="http://techslides.com/demos/sample-videos/small.webm" type="video/webm">
+        <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+        Your browser does not support the HTML5 video element.
+      </video>
+
+</body>
+
+</html>

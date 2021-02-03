@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3</title>
+    <!-- 
+
+        - style of id is more super than the style of class
+
+        Adding internal css
+    p{
+        background-color : white
+    }
+
+    Here 'p' is selector and content inside the brackets is declaration.
+    'background-color' is the property and 'white' is the value
+
+
+    - em
+
+     'em' is a typographic term that has come to the Web. On the Web, em units are usually used for vertical dimensions.  
+      One 'em' maps to the height of one capital letter in the parent context.   
+
+      li { font-size: 0.9em; }  /* text in a list item is smaller than its parents */
+      h1 { font-size: 1.2em; }  /* but an h1 will be bigger than the parent */
+      i  { font-size: 0.5em; }  /* and any italicized text will be half as big. */
+
+
+    - vh / vw
+      
+        'vh' stands for viewport height, and 'vw' for viewport width.  The vh and vw units 
+        work much like the percentage ( % ) unit. But instead of percentage of the parent, 
+        it is percentage of the screen (aka viewport).  Obviously, vh is for vertical dimensions, 
+        and vw for horizontal dimensions.
+
+        p { 
+            margin-left:  10vw;
+            margin-right: 10vw;  /* 10% of screen width will be spent on the two side margins */
+         }
+
+
+    
+    -Styling Lists
+        
+        'list-style-type' governs the little list marker that is usually positioned to the left of any list item. 
+         For <ul> several popular values: disc, circle, square, and none.
+        
+        For ordered lists (<ol>)  different ways of having the numbers : decimal, decimal-leading-zero, lower-roman, 
+        upper-roman, lower-alpha, upper-alpha, as well as several of the worlds languages: armenian, georgian, 
+        simp-chinese-formal, and many others. 
+
+        - list-style-position
+         The two values are inside and outside.  They govern whether the markers are positioned inside the box of the list, or outside. 
+
+        -To add image to the bullet points
+         li { list-style-image: url("my_triangle.png"); }
+
+    
+    -Selectors
+        
+        - Tags : p{} , h1{}
+        - id : #id1 , #id2
+        - class : .class1, .class2
+
+        combinig slectors: 
+           tag,
+           #id, 
+           .class{ declaration }
+        
+        -Specialised selectors
+            blockquote.speech { font-color: green; }
+
+            In the example above, the blockquote.speech selector is a blockquote tag selector combined with 
+            a .speech class selector.  So this rule will not necessarily apply to every blockquote, nor every element 
+            with the speech class. Instead, it will only apply to those blockquotes that also have the speech class.
+
+
+        - Descendant selectors
+
+           To add a particular style to a tag in a certain section : #sectionID tag { declaration }
+
+           #intro blockquote a { font-weight: bold; } 
+           Any <a> tags anywhere inside a <blockquote> anywhere inside the #intro section will now be bold.
+
+        -Direct Descendent selectors
+
+            #inctro > a { declaration }
+            The above can be used to apply styles just to the direct descendents.
+
+        -Everything selector
+
+            body > * { margin-left: 10px; } /* all the _direct_ children of the body receive the margin */
+
+        rules defined in class are superior than defined in id.
+
+        add !important after the rule to make it permanent
+
+        - For : <li class="leaf fruit"><a>apple</a></li>
+                Selector will be  ' .leaf.fruit '
+
+        
+    -->
+    <style>
+        /* Comments inside the css are done like this */
+    </style>
+    <!-- Adding external css-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Adding inline css-->
+    <p style="background-color: aquamarine;"></p>
+</body>
+
+</html>
